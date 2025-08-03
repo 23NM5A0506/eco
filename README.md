@@ -42,7 +42,7 @@ Users scan QR codes at registered bins, verify their GPS location, and complete 
 
 ## 🙋‍♂️ Author
 
-**Chandu Karri**  
+**Dharani Jagarapu**  
 Final-year B.Tech student | Full-stack Developer (MERN & .NET)  
 📧 dharanijagarapu0@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/dharani-jagarapu-096b74338/) 
