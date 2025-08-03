@@ -36,7 +36,7 @@ Users scan QR codes at registered bins, verify their GPS location, and complete 
 
 ## 📂 Repository
 
-📎 GitHub: [https://github.com/Chandu5342/eco](https://github.com/Chandu5342/eco)
+📎 GitHub: [https://github.com/23NM5A0506/eco](https://github.com/23NM5A0506/eco)
 
 ---
 
@@ -44,6 +44,6 @@ Users scan QR codes at registered bins, verify their GPS location, and complete 
 
 **Chandu Karri**  
 Final-year B.Tech student | Full-stack Developer (MERN & .NET)  
-📧 karrichandu309@gmail.com  
-🔗 [LinkedIn](www.linkedin.com/in/chandu-karri-8b583a2b4) 
+📧 dharanijagarapu0@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/dharani-jagarapu-096b74338/) 
 
