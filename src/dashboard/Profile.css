@@ -1,0 +1,302 @@
+.profile-page-container {
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: linear-gradient(rgba(34, 139, 34, 0.8), rgba(0, 100, 0, 0.8)),
+              url(http://localhost:3000/static/media/rolebg.af2861b….png) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.dashboard {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.left-panel {
+  background-color: #065c2a;
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 22rem;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.avatar {
+  background-color: #3ccc7b;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.email {
+  color: #b0f0c4;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.medal-section {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile-links p {
+  background-color: #0a7037;
+  padding: 0.6rem;
+  margin: 0.4rem 0;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #e5ffe9;
+}
+.profile-links {
+  margin-top: 20px;
+}
+
+.field-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.field-row label {
+  width: 100px;
+  font-weight: bold;
+}
+
+.field-row .dotted {
+  flex: 1;
+  border-bottom: 1px dashed #aaa;
+  padding-left: 10px;
+}
+
+.field-row input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.icon-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.main-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.profile-form {
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  width: 100px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.form-row .dotted {
+  flex: 1;
+  border-bottom: 1px dashed #999;
+  padding: 6px 10px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-row {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.button-row button {
+  padding: 6px 16px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-row button:hover {
+  background-color: #45a049;
+}
+
+.top-section {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.challenges,
+.trades {
+  background-color: #08753b;
+  padding: 1.5rem;
+  border-radius: 20px;
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease-in-out;
+}
+.challenges:hover,
+.trades:hover {
+  transform: translateY(-4px);
+}
+
+.bar-container {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.bar {
+  background-color: #0d3b26;
+  height: 10px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.fill {
+  height: 10px;
+  background-color: #4caf50;
+  transition: width 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.trade-count {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.badge {
+  background-color: #034d1f;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.badge-icon {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.badge-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.badge-sub {
+  color: #b7f7c3;
+  font-size: 0.8rem;
+}
+
+.bottom-section {
+  background-color: #08753b;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.yearly-activity {
+  background-color: #065e2c;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.activity-header h3 {
+  margin: 0;
+}
+
+.leaderboard {
+  color: #a7ffce;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.months-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #c3f3d3;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  padding: 0 10px;
+}
+
+.activity-grid {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  max-width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.day {
+  width: 12px;
+  height: 12px;
+  background-color: #144d2e;
+  border-radius: 2px;
+}
+
+/* Intensity levels */
+.level-1 {
+  background-color: #1bc94d;
+}
+.level-2 {
+  background-color: #0f9d3a;
+}
+.level-3 {
+  background-color: #06672c;
+}
+
+
+

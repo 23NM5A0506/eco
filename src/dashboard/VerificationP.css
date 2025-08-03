@@ -1,0 +1,408 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container */
+.verification-container {
+    background-color: #000;
+    background-image: linear-gradient(rgba(78, 48, 48, 0.4), rgba(0, 50, 0, 0.4)), url('../images/VPP.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Form Box */
+.vc {
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    position: fixed;
+}
+
+.vc > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* Heading */
+.heading {
+    font-size: 32px;
+    color: #FFEB3B;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Inputs & Buttons */
+.qr-input {
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+}
+
+.scan-btn,
+.submit-btn {
+    width: 125%;
+    height: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 6px #000;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+
+.scan-btn {
+    background-color: #00BFFF;
+}
+
+.scan-btn:hover {
+    background-color: #009ACD;
+    transform: scale(1.03);
+}
+
+.submit-btn {
+    
+    background-color: orange;
+    margin-top: 20.8rem;
+}
+
+.submit-btn:hover {
+    background-color: darkorange;
+    transform: scale(1.03);
+}
+
+/* Scanner Area */
+.scanner-box {
+    margin-top: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content {
+    background-color: #111;
+    color: #fff;
+    border: 2px solid #00BFFF;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+    text-align: center;
+    position: relative;
+}
+
+.modal-content video {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.modal-content .scan-btn {
+    background-color: #00BFFF;
+    padding: 12px 24px;
+    font-size: 16px;
+    width: auto;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Upload */
+.upload-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-label:hover {
+    background-color: #218838;
+}
+
+/* Loader */
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #00BFFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Alerts */
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: bold;
+    margin: 10px auto;
+    width: fit-content;
+    animation: fadeIn 0.3s ease;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.alert-failure {
+    background-color: #dc3545;
+    color: white;
+}
+
+.alert i {
+    font-size: 20px;
+}
+
+/* Confirmation Message */
+.confirmation-box {
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: #222;
+    border: 2px solid limegreen;
+    color: lime;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 0 15px limegreen;
+    animation: fadeIn 0.3s ease;
+}
+/* Loader overlay */
+.overlay-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    color: white;
+}
+
+.loader-circle {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #4caf50;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Success/Failure Toast */
+.toast-rectangle {
+    position: fixed;  /* Make the element fixed in place */
+    top: 50%;         /* Position it 50% from the top of the viewport */
+    left: 50%;        /* Position it 50% from the left of the viewport */
+    transform: translate(-50%, -50%); /* Offset by half of its width/height to center */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    text-align: center;
+    width: 300px;
+}
+
+.toast-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Optional for success and error message styling */
+.toast-rectangle.success {
+    background-color: #4caf50; /* Green for success */
+}
+
+.toast-rectangle.error {
+    background-color: #f44336; /* Red for error */
+}
+
+/* Icons and message */
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 18px;
+}
+
+/* Toast buttons */
+.toast-buttons {
+    margin-top: 10px;
+}
+
+.toast-buttons button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.toast-buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Toggle button */
+.toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #fff;
+    color: #333;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Light mode styles */
+body.light-mode,
+.verification-container.light {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.light .vc {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.cam-toggle-btn {
+    margin-top: 1rem;
+    padding: 8px 16px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Progress Circle */
+.progress-wrapper {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.progress-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(#4caf50 0%, #ccc 0%);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.progress-inner {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}

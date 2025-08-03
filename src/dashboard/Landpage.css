@@ -1,0 +1,259 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* Body */
+  body {
+  
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  /* Header Styling */
+  header {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 0;
+  }
+  
+  .header-container {
+    margin-top: 1rem;
+  }
+  
+  /* Navbar */
+  .container {
+    width: 100%;
+   
+    height: 5rem;
+    color: black;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #154c79;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nav-list a:hover {
+    color: #2b8bd6;
+    transform: scale(1.1);
+  }
+  
+  /* Main Content */
+  .main {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+   
+  }
+  
+  /* Left Side */
+  .left-side {
+    width: 80%;
+    background-color: #05c2dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-side img {
+    width: 550px;
+    height: auto;
+    object-fit: contain;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Right Side */
+  .right-side {
+    width: 30%;
+    background-color: #154c79;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Login Box */
+  .login-container {
+    width: 320px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: -4rem;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+    color: #154c79;
+    font-size: 24px;
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #f9f9f9;
+    color: #333;
+  }
+  
+  .login-container input:focus {
+    border-color: #2b8bd6;
+    outline: none;
+  }
+  
+  /* Login Button */
+  .login-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #2b8bd6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-container button:hover {
+    background: #1c6cb5;
+  }
+  
+  /* Create Account Link */
+  .create-account {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .create-account a {
+    color: #2b8bd6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .create-account a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main {
+      flex-direction: column;
+    }
+  
+    .left-side,
+    .right-side {
+      width: 100%;
+      height: 50%;
+    }
+  
+    .login-container {
+      width: 85%;
+      margin-top: 2rem;
+    }
+  
+    .container {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+      height: auto;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  .wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-pane {
+  width: 70%;
+  background-color: #05c2dd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  width: 550px;
+  height: auto;
+  animation: float 4s ease-in-out infinite;
+}
+
+.right-pane {
+  width: 30%;
+  background-color: #154c79;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px; /* To give space below navbar height */
+}
+
+/* Remove main, left-side, right-side styles if you're using the new layout */
+
+/* Optional: Adjust Navbar position */
+header {
+  background: transparent;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.container {
+  background-color: transparent;
+  box-shadow: none;
+  color: black;
+}

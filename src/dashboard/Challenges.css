@@ -1,0 +1,99 @@
+.header-section {
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+    padding: 2rem;
+    color: white;
+  }
+  
+  .container-box {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  
+  }
+  
+  .tabs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tab-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background: #4a5568;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .tab-btn.active,
+  .tab-btn:hover {
+    background: #68d391;
+    color: #1a202c;
+  }
+  
+  .dropdown-container {
+    margin-top: 1rem;
+  }
+  
+  .type-dropdown {
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  .challenges-body {
+    background: #edf2f7;
+    padding: 2rem;
+    min-height: 60vh;
+  }
+  
+  .section-title {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 2rem;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2d3748;
+  }
+  .re{
+    color: white !important;
+  }
+  .role-mode-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.role-mode-btn {
+
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.role-mode-btn:hover {
+    background: #e6b800;
+}

@@ -1,0 +1,305 @@
+/* PhotoCapture.css */
+
+.photo-capture-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/VPP.jpg'); /* Ensure path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .qr-button {
+    position: absolute;
+    top: 54%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 95px;
+    height: 93px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 2px solid #00aa00;
+    background-image: url('../images/qr.jpg'); /* Ensure correct image path */
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .submit-button {
+    position: absolute;
+    top: 88.8%;
+    width: 13%;
+    left: 51.5%;
+    height: 3rem;
+    transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    background-color: orange;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  .submit-button:hover {
+    background-color: darkorange;
+  }
+  .photo-popup {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #ccc;
+    padding: 16px;
+    border-radius: 10px;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .webcam {
+    width: 260px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  
+  .photo-options {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .uploads-btn {
+    background-color: #eee;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .success-popup {
+    position: fixed;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4CAF50;
+    color: white;
+    padding: 20px 25px;
+    border-radius: 16px;
+    font-size: 16px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    text-align: center;
+    animation: popIn 0.3s ease-out, bounceIn 0.8s ease-out;
+}
+
+.success-popup p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Adding sparkle effect inside the popup */
+.success-popup::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;base64,...') repeat;
+    animation: sparkle 1s infinite;
+    z-index: 1;
+}
+
+/* Adding glow effect around the popup */
+.success-popup {
+    box-shadow: 0 0 20px 10px rgba(76, 175, 80, 0.5); /* Green glowing effect */
+    transform: scale(1) translateY(0);
+}
+
+/* Buttons Styling */
+.home-btn,
+.try-again-btn,
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+.home-btn:hover {
+    background-color: #007bff;
+}
+.try-again-btn:hover {
+    background-color: #28a745;
+}
+.cancel-btn:hover {
+    background-color: #dc3545;
+}
+
+/* Optional: Add sparkle animation effect on success message text */
+.success-popup p:nth-child(1) {
+    animation: sparkle 1.5s infinite;
+}
+  .qr-image-preview {
+    position: absolute;
+    top: 63%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 21%;
+    height: 28%;
+    border-radius: 10px;
+    object-fit: cover;
+    z-index: 3;
+    border: 2px solid #00aa00;
+  }
+  .capture-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  .capture-btn:hover {
+    background-color: #218838;
+  }
+  
+  .loading{
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-s {
+    border: 8px solid #f3f3f3; /* Light gray background */
+    border-top: 8px solid #ff5722; /* Bright color for the spinning section */
+    border-radius: 50%;
+    width: 60px; /* Increased size for better visibility */
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+    /* Popup Common */
+.success-popup,
+.error-popup {
+  position: fixed;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.25);
+  padding: 25px 20px;
+  text-align: center;
+  z-index: 999;
+  color: black;
+  animation: popIn 0.3s ease-out;
+}
+@keyframes popIn {
+  from { transform: scale(0.7) translate(-50%, -50%); opacity: 0; }
+  to { transform: scale(1) translate(-50%, -50%); opacity: 1; }
+}
+
+.success-popup p,
+.error-popup p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.home-btn,
+.try-again-btn,
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+.home-btn:hover {
+  background-color: #007bff;
+}
+.try-again-btn:hover {
+  background-color: #28a745;
+}
+.cancel-btn:hover {
+  background-color: #dc3545;
+}
+.upload-btn{
+
+  margin-top: 11rem;
+  width: 10rem;
+ background-color: green;
+
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 6px #000;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+@keyframes sparkle {
+  0% {
+      opacity: 0;
+      transform: scale(0.5);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(1.2);
+  }
+  100% {
+      opacity: 0;
+      transform: scale(0.5);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+      transform: scale(0.5) translateY(-30px);
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.05) translateY(10px);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1) translateY(0);
+  }
+}
